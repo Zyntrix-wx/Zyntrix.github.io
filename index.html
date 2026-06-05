@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chen Yu 的个人博客</title>
+    <meta
+      name="description"
+      content="Chen Yu 的个人博客，记录机器人、嵌入式、工程实践和个人项目。"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-title" href="#top" data-profile-name>Chen Yu</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="sr-only">打开导航</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="主导航" data-nav>
+        <a href="#writing">文章</a>
+        <a href="#projects">项目</a>
+        <a href="#stack">技术栈</a>
+        <a href="#about">关于</a>
+        <a href="#settings">设置</a>
+      </nav>
+    </header>
+
+    <main id="top" class="page">
+      <section class="intro" aria-labelledby="intro-title">
+        <p class="kicker" data-profile-tagline>个人博客 / 技术记录 / 项目复盘</p>
+        <h1 id="intro-title" data-profile-heading>你好，我是 Chen Yu。</h1>
+        <p class="intro-lede" data-profile-intro>
+          我主要记录机器人、嵌入式系统、工程工具链和一些长期项目的复盘。这里不是简历页，
+          更像是我的公开笔记本：放文章、项目过程、踩坑记录，以及一些正在想清楚的问题。
+        </p>
+        <p class="intro-links">
+          <a href="mailto:hello@example.com" data-profile-email>hello@example.com</a>
+          <span aria-hidden="true">/</span>
+          <a href="https://github.com/" target="_blank" rel="noreferrer" data-profile-github>GitHub</a>
+          <span aria-hidden="true">/</span>
+          <a href="https://www.zhihu.com/" target="_blank" rel="noreferrer" data-profile-zhihu>知乎</a>
+        </p>
+      </section>
+
+      <section class="section" id="writing" aria-labelledby="writing-title">
+        <div class="section-head">
+          <p class="section-label">Writing</p>
+          <h2 id="writing-title">最新文章</h2>
+          <p>以记录和复盘为主，不追求包装。</p>
+        </div>
+        <div class="post-list" data-article-list></div>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-head">
+          <p class="section-label">Projects</p>
+          <h2 id="projects-title">项目</h2>
+          <p>保留代表性项目，更多细节放在文章或项目笔记里。</p>
+        </div>
+
+        <div class="filters" role="group" aria-label="项目筛选" data-project-filters>
+          <button class="filter is-active" type="button" data-filter="all">全部</button>
+          <button class="filter" type="button" data-filter="robotics">机器人</button>
+          <button class="filter" type="button" data-filter="embedded">嵌入式</button>
+          <button class="filter" type="button" data-filter="knowledge">知识库</button>
+        </div>
+
+        <div class="project-list" data-project-list></div>
+      </section>
+
+      <section class="section two-column" id="stack" aria-labelledby="stack-title">
+        <div class="section-head">
+          <p class="section-label">Stack</p>
+          <h2 id="stack-title">技术栈</h2>
+          <p>我常用的工具和关注方向。</p>
+        </div>
+        <div class="stack-list" data-stack-list></div>
+      </section>
+
+      <section class="section two-column" id="about" aria-labelledby="about-title">
+        <div class="section-head">
+          <p class="section-label">About</p>
+          <h2 id="about-title">关于</h2>
+          <p>这个博客会更偏向公开笔记，而不是完整后台系统。</p>
+        </div>
+        <div class="about-content">
+          <p>
+            目前关注运动控制、Sim2Real、实时系统、项目文档和工程知识管理。
+            我喜欢把项目中的判断、失败和调试过程写下来，因为这些内容往往比最终结果更有参考价值。
+          </p>
+        </div>
+      </section>
+
+      <section class="section settings-section" id="settings" aria-labelledby="settings-title">
+        <div class="section-head">
+          <p class="section-label">Settings</p>
+          <h2 id="settings-title">设置</h2>
+          <p>在这里修改站点信息、项目列表和技术栈。改动会保存到当前浏览器。</p>
+        </div>
+
+        <div class="settings-panel">
+          <form class="settings-form" data-profile-form>
+            <h3>博客信息</h3>
+            <div class="field-grid">
+              <label class="field">
+                <span>名称</span>
+                <input name="name" autocomplete="name" required />
+              </label>
+              <label class="field">
+                <span>副标题</span>
+                <input name="tagline" required />
+              </label>
+              <label class="field">
+                <span>邮箱</span>
+                <input name="email" type="email" required />
+              </label>
+              <label class="field">
+                <span>GitHub</span>
+                <input name="github" type="url" />
+              </label>
+              <label class="field">
+                <span>知乎</span>
+                <input name="zhihu" type="url" />
+              </label>
+            </div>
+            <label class="field">
+              <span>博客简介</span>
+              <textarea name="intro" rows="4" required></textarea>
+            </label>
+            <div class="form-actions">
+              <button class="action-button" type="submit">保存博客信息</button>
+              <button class="text-button" type="button" data-reset-site>恢复默认内容</button>
+            </div>
+          </form>
+
+          <form class="settings-form" data-project-form>
+            <h3>添加项目</h3>
+            <div class="field-grid">
+              <label class="field">
+                <span>项目名称</span>
+                <input name="title" required />
+              </label>
+              <label class="field">
+                <span>分类</span>
+                <select name="category">
+                  <option value="robotics">机器人</option>
+                  <option value="embedded">嵌入式</option>
+                  <option value="knowledge">知识库</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>项目元信息</span>
+                <input name="meta" placeholder="例如：控制算法 / 系统集成" required />
+              </label>
+              <label class="field">
+                <span>标签</span>
+                <input name="tags" placeholder="用逗号分隔，例如 ROS2, C++, SLAM" />
+              </label>
+              <label class="field">
+                <span>代码链接</span>
+                <input name="link" type="url" placeholder="https://github.com/..." />
+              </label>
+            </div>
+            <label class="field">
+              <span>项目简介</span>
+              <textarea name="summary" rows="3" required></textarea>
+            </label>
+            <label class="field">
+              <span>补充说明</span>
+              <textarea name="detail" rows="3"></textarea>
+            </label>
+            <div class="form-actions">
+              <button class="action-button" type="submit">添加项目</button>
+            </div>
+          </form>
+
+          <div class="project-manager">
+            <h3>当前项目</h3>
+            <div class="managed-project-list" data-project-editor-list></div>
+          </div>
+
+          <form class="settings-form" data-stack-form>
+            <h3>添加技术栈</h3>
+            <label class="field">
+              <span>分类名称</span>
+              <input name="title" placeholder="例如：机器人" required />
+            </label>
+            <label class="field">
+              <span>说明</span>
+              <textarea name="text" rows="3" placeholder="例如：ROS/ROS2、MuJoCo、Isaac Gym。关注从仿真到实机的工程链路。" required></textarea>
+            </label>
+            <div class="form-actions">
+              <button class="action-button" type="submit">添加技术栈</button>
+            </div>
+          </form>
+
+          <div class="project-manager">
+            <h3>当前技术栈</h3>
+            <div class="managed-project-list" data-stack-editor-list></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 <span data-footer-name>Chen Yu</span></span>
+      <a href="#top">回到顶部</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
