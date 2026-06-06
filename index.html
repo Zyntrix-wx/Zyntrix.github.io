@@ -22,7 +22,6 @@
         <a href="#projects">项目</a>
         <a href="#stack">技术栈</a>
         <a href="#about">关于</a>
-        <a href="#settings">设置</a>
       </nav>
     </header>
 
@@ -35,11 +34,9 @@
           更像是我的公开笔记本：放文章、项目过程、踩坑记录，以及一些正在想清楚的问题。
         </p>
         <p class="intro-links">
-          <a href="mailto:hello@example.com" data-profile-email>hello@example.com</a>
+          <a href="mailto:wuxipanwenhu@gmail.com" data-profile-email>wuxipanwenhu@gmail.com</a>
           <span aria-hidden="true">/</span>
           <a href="https://github.com/" target="_blank" rel="noreferrer" data-profile-github>GitHub</a>
-          <span aria-hidden="true">/</span>
-          <a href="https://www.zhihu.com/" target="_blank" rel="noreferrer" data-profile-zhihu>知乎</a>
         </p>
       </section>
 
@@ -92,115 +89,6 @@
         </div>
       </section>
 
-      <section class="section settings-section" id="settings" aria-labelledby="settings-title">
-        <div class="section-head">
-          <p class="section-label">Settings</p>
-          <h2 id="settings-title">设置</h2>
-          <p>在这里修改站点信息、项目列表和技术栈。改动会保存到当前浏览器。</p>
-        </div>
-
-        <div class="settings-panel">
-          <form class="settings-form" data-profile-form>
-            <h3>博客信息</h3>
-            <div class="field-grid">
-              <label class="field">
-                <span>名称</span>
-                <input name="name" autocomplete="name" required />
-              </label>
-              <label class="field">
-                <span>副标题</span>
-                <input name="tagline" required />
-              </label>
-              <label class="field">
-                <span>邮箱</span>
-                <input name="email" type="email" required />
-              </label>
-              <label class="field">
-                <span>GitHub</span>
-                <input name="github" type="url" />
-              </label>
-              <label class="field">
-                <span>知乎</span>
-                <input name="zhihu" type="url" />
-              </label>
-            </div>
-            <label class="field">
-              <span>博客简介</span>
-              <textarea name="intro" rows="4" required></textarea>
-            </label>
-            <div class="form-actions">
-              <button class="action-button" type="submit">保存博客信息</button>
-              <button class="text-button" type="button" data-reset-site>恢复默认内容</button>
-            </div>
-          </form>
-
-          <form class="settings-form" data-project-form>
-            <h3>添加项目</h3>
-            <div class="field-grid">
-              <label class="field">
-                <span>项目名称</span>
-                <input name="title" required />
-              </label>
-              <label class="field">
-                <span>分类</span>
-                <select name="category">
-                  <option value="robotics">机器人</option>
-                  <option value="embedded">嵌入式</option>
-                  <option value="knowledge">知识库</option>
-                </select>
-              </label>
-              <label class="field">
-                <span>项目元信息</span>
-                <input name="meta" placeholder="例如：控制算法 / 系统集成" required />
-              </label>
-              <label class="field">
-                <span>标签</span>
-                <input name="tags" placeholder="用逗号分隔，例如 ROS2, C++, SLAM" />
-              </label>
-              <label class="field">
-                <span>代码链接</span>
-                <input name="link" type="url" placeholder="https://github.com/..." />
-              </label>
-            </div>
-            <label class="field">
-              <span>项目简介</span>
-              <textarea name="summary" rows="3" required></textarea>
-            </label>
-            <label class="field">
-              <span>补充说明</span>
-              <textarea name="detail" rows="3"></textarea>
-            </label>
-            <div class="form-actions">
-              <button class="action-button" type="submit">添加项目</button>
-            </div>
-          </form>
-
-          <div class="project-manager">
-            <h3>当前项目</h3>
-            <div class="managed-project-list" data-project-editor-list></div>
-          </div>
-
-          <form class="settings-form" data-stack-form>
-            <h3>添加技术栈</h3>
-            <label class="field">
-              <span>分类名称</span>
-              <input name="title" placeholder="例如：机器人" required />
-            </label>
-            <label class="field">
-              <span>说明</span>
-              <textarea name="text" rows="3" placeholder="例如：ROS/ROS2、MuJoCo、Isaac Gym。关注从仿真到实机的工程链路。" required></textarea>
-            </label>
-            <div class="form-actions">
-              <button class="action-button" type="submit">添加技术栈</button>
-            </div>
-          </form>
-
-          <div class="project-manager">
-            <h3>当前技术栈</h3>
-            <div class="managed-project-list" data-stack-editor-list></div>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer class="footer">
