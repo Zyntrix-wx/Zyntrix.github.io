@@ -8,7 +8,7 @@
       name="description"
       content="Zyntrix 的个人博客，记录机器人、嵌入式、工程实践和个人项目。"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=20260606-contacts" />
   </head>
   <body>
     <header class="site-header">
@@ -96,7 +96,10 @@
       <a href="#top">回到顶部</a>
     </footer>
 
-    <script src="content.js"></script>
-    <script src="script.js"></script>
+    <script>
+      localStorage.removeItem("personal-blog-content-v1");
+    </script>
+    <script src="content.js?v=20260606-contacts"></script>
+    <script src="script.js?v=20260606-contacts"></script>
   </body>
 </html>
