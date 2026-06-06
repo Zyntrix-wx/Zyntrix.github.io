@@ -1,14 +1,14 @@
 :root {
-  --bg: #f4efe7;
-  --paper: #fbf7ef;
-  --text: #191713;
-  --muted: #6f675d;
-  --quiet: #8c8378;
-  --line: #d8cec0;
-  --line-strong: #b9ad9e;
-  --accent: #b84f2a;
-  --accent-dark: #7d341f;
-  --wash: #eadfce;
+  --bg: #07100c;
+  --paper: #0d1812;
+  --text: #e5f2e9;
+  --muted: #9fb2a6;
+  --quiet: #718579;
+  --line: #1b3125;
+  --line-strong: #2d4f3c;
+  --accent: #55d889;
+  --accent-dark: #8cf0ad;
+  --wash: #10291b;
   --max: 960px;
   --measure: 720px;
 }
@@ -24,7 +24,8 @@ html {
 body {
   margin: 0;
   background:
-    linear-gradient(90deg, rgba(25, 23, 19, 0.035) 1px, transparent 1px) 0 0 / 72px 72px,
+    radial-gradient(circle at 12% 0%, rgba(85, 216, 137, 0.11), transparent 34rem),
+    linear-gradient(90deg, rgba(229, 242, 233, 0.045) 1px, transparent 1px) 0 0 / 72px 72px,
     var(--bg);
   color: var(--text);
   font-family:
@@ -36,7 +37,7 @@ body {
 
 a {
   color: inherit;
-  text-decoration-color: rgba(184, 79, 42, 0.45);
+  text-decoration-color: rgba(85, 216, 137, 0.55);
   text-decoration-thickness: 1px;
   text-underline-offset: 4px;
 }
@@ -56,7 +57,7 @@ textarea {
   width: 100%;
   border: 1px solid var(--line);
   border-radius: 0;
-  background: rgba(251, 247, 239, 0.68);
+  background: rgba(13, 24, 18, 0.72);
   color: var(--text);
   font:
     14px / 1.5 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -78,7 +79,7 @@ input:focus,
 select:focus,
 textarea:focus {
   border-color: var(--accent);
-  outline: 3px solid rgba(184, 79, 42, 0.18);
+  outline: 3px solid rgba(85, 216, 137, 0.18);
 }
 
 .sr-only {
@@ -105,7 +106,7 @@ textarea:focus {
   margin: 0 auto;
   padding: 22px 0 18px;
   border-bottom: 1px solid var(--line);
-  background: rgba(244, 239, 231, 0.92);
+  background: rgba(7, 16, 12, 0.9);
   backdrop-filter: blur(14px);
 }
 
@@ -300,7 +301,7 @@ h3 {
   padding: 3px 9px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(251, 247, 239, 0.58);
+  background: rgba(13, 24, 18, 0.72);
   color: var(--muted);
   font-family:
     ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -380,7 +381,7 @@ h3 {
 .intro-links a:focus-visible,
 .project-links a:focus-visible,
 .footer a:focus-visible {
-  outline: 3px solid rgba(184, 79, 42, 0.22);
+  outline: 3px solid rgba(85, 216, 137, 0.22);
   outline-offset: 3px;
 }
 
@@ -455,9 +456,9 @@ h3 {
 
 .action-button {
   padding: 7px 13px;
-  border-color: var(--accent-dark);
-  background: var(--text);
-  color: var(--paper);
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #07100c;
 }
 
 .text-button,
@@ -468,7 +469,7 @@ h3 {
 }
 
 .danger-button {
-  color: #8f2f20;
+  color: #ff8f80;
 }
 
 .managed-project-list {
