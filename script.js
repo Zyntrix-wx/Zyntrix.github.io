@@ -19,7 +19,7 @@ function renderProfile() {
   document.title = `${profile.name} 的个人博客`;
   document.querySelector('meta[name="description"]').setAttribute("content", profile.intro);
   document.querySelector("[data-profile-name]").textContent = profile.name;
-  document.querySelector("[data-profile-heading]").textContent = `你好，我是 ${profile.name}。`;
+  document.querySelector("[data-profile-heading]").textContent = `你好，我是 ${profile.name}`;
   document.querySelector("[data-profile-tagline]").textContent = profile.tagline;
   document.querySelector("[data-profile-intro]").textContent = profile.intro;
   document.querySelector("[data-footer-name]").textContent = profile.name;
