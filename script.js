@@ -33,7 +33,8 @@ function renderProfile() {
 }
 
 function renderArticles() {
-  articleList.innerHTML = state.articles
+  articleList.innerHTML = state.articles.length
+    ? state.articles
     .map(
       (article) => `
         <article class="post">
@@ -44,11 +45,15 @@ function renderArticles() {
         </article>
       `,
     )
-    .join("");
+      .join("")
+    : `<p class="empty-state">暂时还没有发布文章。</p>`;
 }
 
 function renderProjects() {
-  projectList.innerHTML = state.projects
+  document.querySelector("[data-project-filters]").hidden = state.projects.length === 0;
+
+  projectList.innerHTML = state.projects.length
+    ? state.projects
     .map(
       (project) => `
         <article class="project" data-category="${escapeHtml(project.category)}">
@@ -68,13 +73,15 @@ function renderProjects() {
         </article>
       `,
     )
-    .join("");
+      .join("")
+    : `<p class="empty-state">暂时还没有公开项目。</p>`;
 
   applyProjectFilter();
 }
 
 function renderStack() {
-  stackList.innerHTML = state.stack
+  stackList.innerHTML = state.stack.length
+    ? state.stack
     .map(
       (item) => `
         <section class="stack-group">
@@ -83,7 +90,8 @@ function renderStack() {
         </section>
       `,
     )
-    .join("");
+      .join("")
+    : `<p class="empty-state">暂时还没有整理技术栈。</p>`;
 }
 
 function applyProjectFilter() {

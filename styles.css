@@ -227,6 +227,13 @@ h3 {
   border-top: 1px solid var(--line);
 }
 
+.empty-state {
+  margin: 0;
+  padding: 26px 0;
+  border-top: 1px solid var(--line);
+  color: var(--quiet);
+}
+
 .post:first-child,
 .project:first-child,
 .stack-group:first-child {
